@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(0, 0, 0);
+    text-wrap: center;
+    text-decoration-color: antiquewhite;
+    color:antiquewhite;
+
+}
+
+h1{
+    text-align: center;
+    color:antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h2{
+    text-align: center;
+    color:antiquewhite;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+
+div{
+    display: flex;
+    color:bisque;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 8px;
+    margin-bottom:20px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:fit-content;
+}
+button{
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid;
+    color:rgb(23, 6, 34);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(188, 168, 80);
+    border-radius: 20px;
+
+}
+
+button:hover{
+    background-color: rgb(90, 57, 7);
+    border-color: black;
+    cursor: pointer;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    font-size:medium;
+    border-radius: 5px;
+    color:rgb(79, 55, 23);
+    background-color: rgb(239, 202, 146);
+
+}
