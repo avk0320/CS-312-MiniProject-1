@@ -9,7 +9,6 @@
 <body>
     <h1>Creative Blog Site Name</h1>
 
-   
     <h2>Create a New Post</h2>
     <form action="/post" method="POST">
         <div class="container">
@@ -22,11 +21,14 @@
         </div>
         <div class="container">
             <label for="creator">Creator:</label>
-            <input type="text" name="creator" placeholder="Your Name" required>
-            
+            <input type="text" name="creator" placeholder="Your Name" required value="<%= username %>">
+            <% if (userId) { %>
+                <input type="hidden" name="creator_user_id" value="<%= userId %>">
+            <% } %>
         </div>
+        
         <div class="button-container">
-        <button type="submit">Create Post</button>
+            <button type="submit">Create Post</button>
         </div>
     </form>
 
@@ -35,11 +37,10 @@
         <% posts.forEach(post => { %>
             <div class="container">
                 <h2><%= post.title %></h2>
-                <p><%= post.content %></p>
-                <small>By <%= post.creator %> on <%= new Date(post.date).toDateString() %></small>
-                
-                <a href="/edit/<%= post.id %>">Edit</a>
-                <form action="/delete/<%= post.id %>" method="POST" style="display:inline;">
+                <p><%= post.body %></p>
+                <small>By <%= post.creator_name %> on <%= new Date(post.date_created).toLocaleString() %></small>                
+                <a href="/edit/<%= post.blog_id %>">Edit</a>
+                <form action="/delete/<%= post.blog_id %>" method="POST" style="display:inline;">
                     <button type="submit">Delete</button>
                 </form>
             </div>
